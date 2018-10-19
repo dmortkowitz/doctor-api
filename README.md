@@ -12,6 +12,7 @@ _This is a program that lets you look for local doctors, either by their name, o
 * If an error occurs on a search, the application should state what the error is.
 * If the search does not include any doctors, but also includes no error (for example the search simply meets no criteria) the application should return a notification that no applicable criteria were met.
 
+```
 ### Installation directions
 * _You can find the Git Repository for this program at:_
 *
@@ -21,7 +22,7 @@ _This is a program that lets you look for local doctors, either by their name, o
 * _You will need to obtain an API key from Betterdoctor.com, by signing up for their service, then add it with the variable_ exports.apiKey _to a .env file, which you must add in your root project directory._
 * _Once all packages and dependencies are installed, you may navigate to the project folder and use the command:_
 * npm run start
-
+```
 
 ### Technologies used
 * Node.js

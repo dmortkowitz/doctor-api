@@ -2,8 +2,9 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
-// const Promise = require('es6-promise').Promise;
+import { Doctor } from './src/index.html';
 
 $(document).ready(function() {
-
+  let doctor = new Doctor();
+  event.preventDefault();
 });
