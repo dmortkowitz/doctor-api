@@ -12,10 +12,26 @@ _This is a program that lets you look for local doctors, either by their name, o
 * If an error occurs on a search, the application should state what the error is.
 * If the search does not include any doctors, but also includes no error (for example the search simply meets no criteria) the application should return a notification that no applicable criteria were met.
 
-###Technologies used
+### Installation directions
+* _You can find the Git Repository for this program at:_
+*
+* _In terminal, please use the command:_
+* git clone
+### Before starting to use this program, you will need to install all webpacks and dependencies listed in this git directory's package.json file (located here: )
+* _Once all packages and dependencies are installed, you may navigate to the project folder and use the command:_
+* npm run start
+
+
+### Technologies used
 * Node.js
 * Javascript (ES6)
 * CSS
 * HTML5
 * AJAX
 * Atom
+
+## Contact me
+
+_Please contact me at dmortkowitz [at] gmail.com with any questions, critiques, or suggestions._
+
+*Copyright* _David Mortkowitz. 2018._
