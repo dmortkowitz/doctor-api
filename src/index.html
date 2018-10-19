@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>betterdoctor</title>
+    <title>better doctor</title>
   </head>
   <body>
-    <div>
-      <h1>Find a doctor.</h1>
-    </div>
-    <div id="prop1">
-      <h3>Feeling ill? Get a pill!</h3>
-      <h4>Don't you worry, there's always surgery.</h4>
-    </div>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Find a doctor.</h1>
+      </div>
+      <div>
+        <h3>Feeling ill? Get a pill!</h3>
+        <h4>Don't you worry, there's always surgery.</h4>
+      </div>
+      <div>
+        <form class="form-group" id="doctorSubmit">
+          <label for="findDoctor">Search Doctors by Name</label>
+          <input type="text" id="findDoctor" />
+          <button type="submit" class="btn btn-info">Search</button>
+        </form>
 
-    <form class="form-group" id="doctorSubmit">
-      <label for="findDoctor">Search Doctors by Name</label>
-      <input type="text" id="findDoctor" />
-      <button type="submit" class="btn btn-info">Search</button>
-    </form>
-
-    <form class="form-group" id="sickSubmit">
-      <label for="findSick">Search Doctor by Ailment</label>
-      <input type="text" id="findSick" />
-      <button type="submit" class="btn btn-info">Search</button>
-    </form>
+        <form class="form-group" id="sickSubmit">
+          <label for="findSick">Search Doctor by Ailment</label>
+          <input type="text" id="findSick" />
+          <button type="submit" class="btn btn-info">Search</button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
