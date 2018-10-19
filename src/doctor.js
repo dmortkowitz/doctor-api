@@ -1,46 +1,39 @@
-import { apiKey } from './../.env';
+// import { apiKey } from './../.env';
+
+var Promise = require('es6-promise').Promise;
 
 export class Doctor {
-  constructor() {
-    this.state = 'wa-seattle';
-    this.dataSize;
+
+  getDoctor(docName) {
+    return new Promise(function(resolve, reject) {
+      let request = new XMLHttpRequest();
+      let url = `https://api.betterdoctor.com/2016-03-01/doctors?name=${docName}&location=wa-seattle&skip=0&limit=10&user_key=${process.env.ecports.apiKey}`;
+      request.onload = function () {
+        if (this.status === 200) {
+          resolve(request.response);
+        } else {
+          reject(Error(request.statusText));
+        }
+      };
+      request.open("GET", url, true);
+      request.send();
+    });
   }
 
-  getDoctorAilment(search) {
-    let searchData = $.ajax ({
-      url: `https://api.betterdoctor.com/2016-03-01/doctors?query=${search}&location=${this.state}&skip=0&limit=25&user_key=${apiKey}`,
-      type: 'GET',
-      async: false,
-      searchData: {
-        format: 'json'
-      },
-      success: function(response) {
-        console.log(response);
-        let data = response.data;
-      },
-      error: function() {
-        $("#errorField").text("There was an error retrieving your information. PLease try again.");
-      }
+
+  getAilment(ailName) {
+    return new Promise(function(resolve, reject) {
+      let request = new XMLHttpRequest();
+      let url = `https://api.betterdoctor.com/2016-03-01/doctors?query=${ailName}&location=wa-seattle&user_location=27.773%2C-122.413&skip=0&limit=10&user_key=${process.env.exports.apiKey}`;
+      request.onload = function () {
+        if (this.status === 200) {
+          resolve(request.response);
+        } else {
+          reject(Error(request.statusText));
+        }
+      };
+      request.open("GET", url, true);
+      request.send();
     });
-    return searchData;
-  }
-  getDoctorName(docName) {
-    let data = $.ajax({
-      url: `https://api.betterdoctor.com/2016-03-01/doctors?name=${docName}&location=${this.state}&skip=0&limit=20&user_key=${apiKey}`,
-      type: 'GET',
-      async: false,
-      data: {
-        format: 'json'
-      },
-      success: function(response, jqXHR, status) {
-      console.log(response);
-      console.log(jqXHR);
-      console.log(status);
-      },
-      error: function() {
-        $('#errorField').text("There was an error retrieving information. Please try again.");
-      }
-    });
-    return data;
   }
 }
