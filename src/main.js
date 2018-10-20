@@ -2,7 +2,7 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
-import { Doctor } from './doctor.js';
+import { Doctor } from './doctor';
 
 $(document).ready(function() {
 
@@ -21,7 +21,7 @@ $(document).ready(function() {
 
     $('#results').append(`<p>Your Doctors ${searchTerm}:</p>`);
     if(body.data.length === 0){
-      $('#results').append('<p>There are no doctors for your search. Please try again.</p>')
+      $('#results').append('<p>There are no doctors for your search. Please try again.</p>');
     } else {
       for (let i = 0; i<body.data.length; i++) {
         $('#results').append(`<h2><br>${body.data[i].profile.first_name} `+`${body.data[i].profile.last_name}`+`<br></h2><br><h4>Gender: </h4> ${body.data[i].profile.gender}`+` <br> <h4>Phone number:</h4>
@@ -38,15 +38,15 @@ $(document).ready(function() {
 
   $("#sickForm").submit(function(event) {
     event.preventDefault();
-    let searchTerm = $('sick-form').val();
+    let searchAil = $('sick-form').val();
     let newDoctor = new Doctor();
-    let promise = newDoctor.getAilment(searchTerm);
+    let promise = newDoctor.getAilment(searchAil);
 
     promise.then(function(response) {
       let body = JSON.parse(response);
       console.log(body);
 
-    $('results').append(`<p>Doctors that work with ${searchTerm}:</p>`);
+    $('results').append(`<p>Doctors that work with ${searchAil}:</p>`);
     if(body.data.length === 0){
       $('#results').append('<p>No Doctors work with this issue. Please try again.')
     } else {
