@@ -18,7 +18,7 @@ _This is a program that lets you look for local doctors, either by their name, o
 * https://github.com/dmortkowitz/doctor-api.git
 * _In terminal, please use the command:_
 * git clone
-### Before starting to use this program, you will need to install all webpacks and dependencies listed in this git directory's package.json file (located here: https://github.com/dmortkowitz/doctor-api/blob/master/package.json )
+#### Before starting to use this program, you will need to install all webpacks and dependencies listed in this git directory's package.json file (located here: https://github.com/dmortkowitz/doctor-api/blob/master/package.json )
 * _You will need to obtain an API key from Betterdoctor.com, by signing up for their service, then add it with the variable_ exports.apiKey _to a .env file, which you must add in your root project directory._
 * _Once all packages and dependencies are installed, you may navigate to the project folder and use the command:_
 * npm run start
