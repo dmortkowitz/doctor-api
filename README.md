@@ -12,7 +12,6 @@ _This is a program that lets you look for local doctors, either by their name, o
 * If an error occurs on a search, the application should state what the error is.
 * If the search does not include any doctors, but also includes no error (for example the search simply meets no criteria) the application should return a notification that no applicable criteria were met.
 
-```
 
 ## Installation directions
 
@@ -27,7 +26,6 @@ _This is a program that lets you look for local doctors, either by their name, o
 * _Once all packages and dependencies are installed, you may navigate to the project folder and use the command:_
 * npm run start
 
-```
 
 ## Technologies used
 * Node.js
